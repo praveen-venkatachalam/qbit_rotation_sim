@@ -4,10 +4,9 @@ import tkinter
 
 #Define Window
 root = tkinter.Tk()
-root.title('Quantum Glasses')
+root.title('Qbit Rotation Simulator')
 
-#set icon
-root.wm_iconbitmap(bitmap = "logo.png")
+#set size
 root.geometry('399x410')
 root.resizable(0,0)
 
