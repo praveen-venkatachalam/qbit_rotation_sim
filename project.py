@@ -13,7 +13,7 @@ root = tkinter.Tk()
 root.title('Qbit Rotation Simulator')
 
 #set size
-root.iconbitmap(default='logo.png')
+# root.iconbitmap(default='logo.png')
 root.geometry('435x330')
 root.resizable(0,0)
 
@@ -26,14 +26,13 @@ display_font = ('Arial', 32)
 
 # Inititalize the Quantum circuit
 def initialize_circuit():
-    """
-    Intitalizes the Quantum circuit
-    """
-   global circuit
-   circuit =QuantumCircuit(1)
+	global circuit
+	circuit =QuantumCircuit(1)
 
 initialize_circuit()
 theta =0
+
+	
 
 #Define functions
 
@@ -78,7 +77,7 @@ def clear(circuit):
             gate.config(state=NORMAL)
 
 #define function for about
- def about():
+def about():
     """
     Displays the info about Project"
     """
@@ -171,28 +170,28 @@ def user_input(circuit,key):
     get_input.geometry('360x160')
     get_input.resizable(0,0)
 
-    val1= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") text='PI/4', command= lambda:change_theta(0.25,get_input,circuit,key ))
+    val1= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") ,text='PI/4', command= lambda:change_theta(0.25,get_input,circuit,key ))
     val1.grid(row=0, column=0)
 
-    val2= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") text='PI/2', command= lambda:change_theta(0.50,get_input,circuit,key ))
+    val2= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") ,text='PI/2', command= lambda:change_theta(0.50,get_input,circuit,key ))
     val2.grid(row=0, column=1)
 
-    val3= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") text='PI', command= lambda:change_theta(1.0,get_input,circuit,key ))
+    val3= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") ,text='PI', command= lambda:change_theta(1.0,get_input,circuit,key ))
     val3.grid(row=0, column=2)
 
-    val4= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") text='2*PI', command= lambda:change_theta(2.0,get_input,circuit,key ))
+    val4= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") ,text='2*PI', command= lambda:change_theta(2.0,get_input,circuit,key ))
     val4.grid(row=0, column=3, sticky ='W')
 
-    nval1= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") text='-PI/4', command= lambda:change_theta(-0.25,get_input,circuit,key ))
+    nval1= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") ,text='-PI/4', command= lambda:change_theta(-0.25,get_input,circuit,key ))
     nval1.grid(row=1, column=0)
 
-    nval2= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") text='-PI/2', command= lambda:change_theta(-0.50,get_input,circuit,key ))
+    nval2= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") ,text='-PI/2', command= lambda:change_theta(-0.50,get_input,circuit,key ))
     nval2.grid(row=1, column=1)
 
-    nval3= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") text='-PI', command= lambda:change_theta(-1.0,get_input,circuit,key ))
+    nval3= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") ,text='-PI', command= lambda:change_theta(-1.0,get_input,circuit,key ))
     nval3.grid(row=1, column=2)
 
-    nval4= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") text='-2*PI', command= lambda:change_theta(-2.0,get_input,circuit,key ))
+    nval4= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") ,text='-2*PI', command= lambda:change_theta(-2.0,get_input,circuit,key ))
     nval4.grid(row=1, column=3, sticky ='W')
 
     text_object= tkinter.Text(get_input, height=20, width=20, bg="light cyan")
@@ -224,8 +223,8 @@ display.pack(padx=3,pady=4)
 x_gate = tkinter.Button(button_frame, font=button_font, bg=buttons, text='X', command= lambda:[display_gate('x'),circuit.x(0)])
 y_gate = tkinter.Button(button_frame, font=button_font, bg=buttons, text='Y', command= lambda:[display_gate('y'),circuit.y(0)])
 z_gate = tkinter.Button(button_frame, font=button_font, bg=buttons, text='Z', command= lambda:[display_gate('z'),circuit.z(0)])
-x_gate.grid(row=0,column=0,ipadx=45, pady=1
-y_gate.grid(row=0,column=1,ipadx=45, pady=1
+x_gate.grid(row=0,column=0,ipadx=45, pady=1)
+y_gate.grid(row=0,column=1,ipadx=45, pady=1)
 z_gate.grid(row=0,column=2,ipadx=53, pady=1, sticky='E')
 
 #Second Row of Buttons
