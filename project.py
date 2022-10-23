@@ -13,7 +13,6 @@ root = tkinter.Tk()
 root.title('Qbit Rotation Simulator')
 
 #set size
-# root.iconbitmap(default='logo.png')
 root.geometry('435x330')
 root.resizable(0,0)
 
