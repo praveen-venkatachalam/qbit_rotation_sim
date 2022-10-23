@@ -166,7 +166,7 @@ def user_input(circuit,key):
     #Initialize and define the properties of window
     get_input = tkinter.Tk()
     get_input.title('Get theta')    
-    get_input.geometry('360x160')
+    get_input.geometry('360x210')
     get_input.resizable(0,0)
 
     val1= tkinter.Button(get_input, height=2, width=10, bg= buttons, font=("Arial,10") ,text='PI/4', command= lambda:change_theta(0.25,get_input,circuit,key ))
