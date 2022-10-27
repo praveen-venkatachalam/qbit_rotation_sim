@@ -7,7 +7,7 @@
 
 ## What our app will do?
 
-- This app is use to represent the rotation of Qubit in a Bloch sphere when it is passed through different quantum gates.
+- This app is used to represent the rotation of Qubit in a Bloch sphere when it is passed through different quantum gates.
 - This can be very useful for learning basics of qubit and its rotation operation(or Dirac change) in real time.
 - This is achieved through python Qiskit and Tkinter.
 - Also it helps visualising change in qbits when it is passed through combination of quantum gates.
